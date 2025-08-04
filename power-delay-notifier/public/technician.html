@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Delay Notifier - Technician Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Technician Portal</h1>
+            <p>Send power delay notifications to customers in specific areas</p>
+        </div>
+
+        <div class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="customer.html" class="nav-link">Customer Portal</a>
+            <a href="technician.html" class="nav-link">Technician Portal</a>
+            <a href="technician-register.html" class="nav-link">Technician Registration</a>
+        </div>
+
+        <!-- Login Section -->
+        <div id="loginSection" class="card">
+            <h2>Technician Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginTechId">Tech ID *</label>
+                    <input type="text" id="loginTechId" name="techId" required placeholder="Enter your Tech ID">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password *</label>
+                    <input type="password" id="loginPassword" name="password" required
+                        placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <span id="loginSpinner" class="spinner hidden"></span>
+                    Login
+                </button>
+            </form>
+            <div id="loginAlert"></div>
+
+            <div class="mt-20">
+                <h3>New Technician?</h3>
+                <p>Register as a new technician to get access to the system.</p>
+                <a href="technician-register.html" class="btn btn-success">Register as Technician</a>
+            </div>
+        </div>
+
+        <!-- Dashboard Section (Hidden initially) -->
+        <div id="dashboardSection" class="hidden">
+            <div class="card">
+                <div class="flex justify-between align-center">
+                    <h2>Technician Dashboard</h2>
+                    <div>
+                        <span id="techName" class="status status-online"></span>
+                        <button id="logoutBtn" class="btn btn-danger">Logout</button>
+                    </div>
+                </div>
+                <p>Welcome back! You can now send power delay notifications to customers in specific areas.</p>
+            </div>
+
+            <div class="grid">
+                <!-- Send Notification -->
+                <div class="card">
+                    <h2>Send Notification</h2>
+                    <form id="notificationForm">
+                        <div class="form-group">
+                            <label>Target Areas *</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="notificationAreas" value="chickpete">
+                                    <span>Chickpete</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="notificationAreas" value="balepete">
+                                    <span>Balepete</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="notificationAreas" value="akkipete">
+                                    <span>Akkipete</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="notificationAreas" value="kumbarpete">
+                                    <span>Kumbarpete</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="notificationAreas" value="chamrajpete">
+                                    <span>Chamrajpete</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="notificationAreas" value="nagarthpete">
+                                    <span>Nagarthpete</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="notificationAreas" value="cubbonpete">
+                                    <span>Cubbonpete</span>
+                                </label>
+                            </div>
+                            <small>Select one or more areas to send notifications to</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Notification Message *</label>
+                            <textarea id="message" name="message" required
+                                placeholder="Enter the notification message (minimum 10 characters)"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">
+                            <span id="sendSpinner" class="spinner hidden"></span>
+                            Send Notification
+                        </button>
+                    </form>
+                    <div id="notificationAlert"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/technician-new.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Delay Notifier - Customer Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Customer Portal</h1>
+            <p>Register for power delay notifications in your area</p>
+        </div>
+
+        <div class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="customer.html" class="nav-link">Customer Portal</a>
+            <a href="technician.html" class="nav-link">Technician Portal</a>
+        </div>
+
+        <div class="grid">
+            <!-- Customer Registration -->
+            <div class="card">
+                <h2>Register for Notifications</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="area">Area *</label>
+                        <select id="area" name="area" required>
+                            <option value="">Select your area</option>
+                            <option value="chickpete">Chickpete</option>
+                            <option value="balepete">Balepete</option>
+                            <option value="akkipete">Akkipete</option>
+                            <option value="kumbarpete">Kumbarpete</option>
+                            <option value="chamrajpete">Chamrajpete</option>
+                            <option value="nagarthpete">Nagarthpete</option>
+                            <option value="cubbonpete">Cubbonpete</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span id="registerSpinner" class="spinner hidden"></span>
+                        Register for Notifications
+                    </button>
+                </form>
+                <div id="registerAlert"></div>
+            </div>
+
+            <!-- Update Area -->
+            <div class="card">
+                <h2>Update Your Area</h2>
+                <form id="updateForm">
+                    <div class="form-group">
+                        <label for="updateEmail">Email Address *</label>
+                        <input type="email" id="updateEmail" name="email" required
+                            placeholder="Enter your registered email">
+                    </div>
+                    <div class="form-group">
+                        <label for="updateArea">New Area *</label>
+                        <select id="updateArea" name="area" required>
+                            <option value="">Select your new area</option>
+                            <option value="chickpete">Chickpete</option>
+                            <option value="balepete">Balepete</option>
+                            <option value="akkipete">Akkipete</option>
+                            <option value="kumbarpete">Kumbarpete</option>
+                            <option value="chamrajpete">Chamrajpete</option>
+                            <option value="nagarthpete">Nagarthpete</option>
+                            <option value="cubbonpete">Cubbonpete</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success">
+                        <span id="updateSpinner" class="spinner hidden"></span>
+                        Update Area
+                    </button>
+                </form>
+                <div id="updateAlert"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/customer.js"></script>
+</body>
+
+</html>

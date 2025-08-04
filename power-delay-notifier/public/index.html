@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Delay Notifier - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Power Delay Notifier</h1>
+            <p>Efficient power outage communication system for technicians and customers</p>
+        </div>
+
+        <div class="nav">
+            <a href="customer.html" class="nav-link">Customer Portal</a>
+            <a href="technician.html" class="nav-link">Technician Portal</a>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Customer Portal</h2>
+                <p>Register for power delay notifications in your area. Stay informed about power outages and
+                    restoration updates.</p>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Register with your name, email, and area</li>
+                    <li>Update your area if you move</li>
+                    <li>Receive instant notifications about power delays</li>
+                    <li>Stay informed about restoration progress</li>
+                </ul>
+                <a href="customer.html" class="btn btn-primary">Go to Customer Portal</a>
+            </div>
+
+            <div class="card">
+                <h2>Technician Portal</h2>
+                <p>Send power delay notifications to customers in specific areas. Manage outage communications
+                    efficiently.</p>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Secure technician authentication</li>
+                    <li>Send notifications to specific areas</li>
+                    <li>Track notification history</li>
+                    <li>View notification statistics</li>
+                </ul>
+                <a href="technician.html" class="btn btn-primary" style="margin-top: 80px;">Go to Technician Portal</a>
+            </div>
+
+            <div class="card">
+                <h2>Technician Registration</h2>
+                <p>New technicians can register themselves with a unique Tech ID and email verification.</p>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Create unique Tech ID for login</li>
+                    <li>Email verification system</li>
+                    <li>Secure password requirements</li>
+                    <li>Area assignment capabilities</li>
+                </ul>
+                <a href="technician-register.html" class="btn btn-success" style="margin-top: 30px;">Register as
+                    Technician</a>
+            </div>
+        </div>
+        <script>
+            // Add some interactivity
+            document.addEventListener('DOMContentLoaded', function () {
+                // Add hover effects to cards
+                const cards = document.querySelectorAll('.card');
+                cards.forEach(card => {
+                    card.addEventListener('mouseenter', function () {
+                        this.style.transform = 'translateY(-5px)';
+                    });
+                    card.addEventListener('mouseleave', function () {
+                        this.style.transform = 'translateY(0)';
+                    });
+                });
+            });
+        </script>
+</body>
+
+</html>
